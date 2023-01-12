@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 import './App.scss';
+import classNames from 'classnames';
 
 import usersFromServer from './api/users';
 import productsFromServer from './api/products';
 import categoriesFromServer from './api/categories';
-import { Category, User, Product } from './types/types';
-import classNames from 'classnames';
-import products from './api/products';
+// import { User, Product } from './types/types';
 
 export const App: React.FC = () => {
   const [visibility] = useState(false);
-  const [users, setUsers] = useState('');
-  const [categories, setCategories] = useState('');
-  const [products, setProducts] = useState('');
+  // const [users, setUsers] = useState('');
+  // const [categories, setCategories] = useState('');
+  // const [products, setProducts] = useState('');
 
-  function findUserById(userId: number): User | null {
-    return usersFromServer.find(user => user.id === userId) || null;
-  }
+  // function findUserById(userId: number): User | null {
+  //   return usersFromServer.find(user => user.id === userId) || null;
+  // }
 
-  function findProductById(productId: number): Product | null {
-    return productsFromServer.find(product => product.id === productId)
-    || null;
-  }
+  // function findProductById(productId: number): Product | null {
+  //   return productsFromServer.find(product => product.id === productId)
+  //   || null;
+  // }
 
-  const findCategoryById = categoriesFromServer.find(
-    category => category.id === productsFromServer.filter(item => item.id));
+  // const findCategoryById = categoriesFromServer.find(
+  //   category => category.id === productsFromServer.filter(item => item.id));
 
   return (
     <div className="section">
